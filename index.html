@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Index</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0a0a0d;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Sora', sans-serif;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 16px;
+    }
+
+    .tab {
+      display: block;
+      padding: 12px 36px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .tab:hover {
+      transform: translateY(-2px);
+    }
+
+    /* PAC1 — Blue glow */
+    .tab-blue {
+      background: linear-gradient(160deg, #080d1a 0%, #0d1628 60%, #1a2a50 100%);
+      border: 1px solid rgba(74,127,232,0.35);
+      color: #7baaf5;
+      box-shadow: 0 0 18px rgba(74,127,232,0.25), inset 0 1px 0 rgba(74,127,232,0.15);
+    }
+    .tab-blue:hover {
+      box-shadow: 0 0 32px rgba(74,127,232,0.45), inset 0 1px 0 rgba(74,127,232,0.2);
+    }
+
+    /* PAC2 — Green glow */
+    .tab-green {
+      background: linear-gradient(160deg, #060f0c 0%, #0a1a13 60%, #0f2a1e 100%);
+      border: 1px solid rgba(61,184,122,0.35);
+      color: #6dd4a4;
+      box-shadow: 0 0 18px rgba(61,184,122,0.25), inset 0 1px 0 rgba(61,184,122,0.15);
+    }
+    .tab-green:hover {
+      box-shadow: 0 0 32px rgba(61,184,122,0.45), inset 0 1px 0 rgba(61,184,122,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="tabs">
+    <a href="PAC1.html" class="tab tab-blue">PAC1</a>
+    <a href="PAC2.html" class="tab tab-green">PAC2</a>
+  </div>
+</body>
+</html>
