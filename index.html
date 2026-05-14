@@ -4,80 +4,101 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RPAC Dashboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      color-scheme: dark;
+      --bg: #08090c;
+      --card: #11131a;
+      --card-hover: #171a24;
+      --border: rgba(255, 255, 255, 0.1);
+      --text: #f4f6fb;
+      --muted: rgba(244, 246, 251, 0.72);
+    }
 
     body {
-      background: #0a0a0d;
-      min-height: 100vh;
+      min-height: 100svh;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at top, rgba(95, 112, 255, 0.16), transparent 34%),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding: 20px;
+    }
+
+    main {
+      width: min(100%, 380px);
+      min-height: calc(100svh - 40px);
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      font-family: 'Sora', sans-serif;
-      padding: 40px 20px;
-      gap: 20px;
+      gap: 22px;
     }
 
     h1 {
-      color: rgba(255,255,255,0.15);
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 8px;
+      font-size: clamp(1.8rem, 8vw, 2.45rem);
+      line-height: 1.05;
+      font-weight: 750;
+      letter-spacing: -0.055em;
+      text-align: center;
     }
 
-    .tabs {
+    .cards {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
       gap: 14px;
-      max-width: 340px;
-      width: 100%;
     }
 
-    .tab {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 20px;
-      border-radius: 12px;
+    .card {
+      min-height: 118px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02)), var(--card);
+      color: var(--text);
       text-decoration: none;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      transition: transform 0.2s, box-shadow 0.2s;
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.32);
+      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
     }
 
-    .tab:hover {
-      transform: translateY(-3px);
+    .card:active,
+    .card:hover {
+      transform: translateY(-2px);
+      background: var(--card-hover);
+      border-color: rgba(255, 255, 255, 0.18);
     }
 
-    /* PAC1 — Blue */
-    .tab-1 {
-      background: linear-gradient(160deg, #080d1a 0%, #0d1628 60%, #1a2a50 100%);
-      border: 1px solid rgba(74,127,232,0.35);
-      color: #7baaf5;
-      box-shadow: 0 0 18px rgba(74,127,232,0.25), inset 0 1px 0 rgba(74,127,232,0.15);
-    }
-    .tab-1:hover { box-shadow: 0 0 32px rgba(74,127,232,0.5), inset 0 1px 0 rgba(74,127,232,0.2); }
+    @media (max-height: 560px) {
+      main {
+        gap: 16px;
+      }
 
-    /* PAC2 — Green */
-    .tab-2 {
-      background: linear-gradient(160deg, #060f0c 0%, #0a1a13 60%, #0f2a1e 100%);
-      border: 1px solid rgba(61,184,122,0.35);
-      color: #6dd4a4;
-      box-shadow: 0 0 18px rgba(61,184,122,0.25), inset 0 1px 0 rgba(61,184,122,0.15);
+      .card {
+        min-height: 92px;
+        border-radius: 22px;
+      }
     }
-    .tab-2:hover { box-shadow: 0 0 32px rgba(61,184,122,0.5), inset 0 1px 0 rgba(61,184,122,0.2); }
   </style>
 </head>
 <body>
-  <h1>RPAC Dashboard</h1>
-  <div class="tabs">
-    <a href="PAC1.html" class="tab tab-1">PAC1</a>
-    <a href="PAC2.html" class="tab tab-2">PAC2</a>
-  </div>
+  <main aria-label="RPAC Dashboard">
+    <h1>RPAC Dashboard</h1>
+
+    <nav class="cards" aria-label="Dashboard links">
+      <a href="PAC1.html" class="card">PAC1</a>
+      <a href="PAC2.html" class="card">PAC2</a>
+    </nav>
+  </main>
 </body>
 </html>
