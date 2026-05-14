@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index</title>
+  <title>RPAC Dashboard</title>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -31,9 +31,9 @@
 
     .tabs {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 14px;
-      max-width: 680px;
+      max-width: 340px;
       width: 100%;
     }
 
@@ -71,113 +71,13 @@
       box-shadow: 0 0 18px rgba(61,184,122,0.25), inset 0 1px 0 rgba(61,184,122,0.15);
     }
     .tab-2:hover { box-shadow: 0 0 32px rgba(61,184,122,0.5), inset 0 1px 0 rgba(61,184,122,0.2); }
-
-    /* PAC3 — Violet */
-    .tab-3 {
-      background: linear-gradient(160deg, #0d0814 0%, #160d28 60%, #261545 100%);
-      border: 1px solid rgba(148,90,232,0.35);
-      color: #c09af7;
-      box-shadow: 0 0 18px rgba(148,90,232,0.25), inset 0 1px 0 rgba(148,90,232,0.15);
-    }
-    .tab-3:hover { box-shadow: 0 0 32px rgba(148,90,232,0.5), inset 0 1px 0 rgba(148,90,232,0.2); }
-
-    /* PAC4 — Amber */
-    .tab-4 {
-      background: linear-gradient(160deg, #140e04 0%, #241808 60%, #3a2810 100%);
-      border: 1px solid rgba(232,168,50,0.35);
-      color: #f5c96a;
-      box-shadow: 0 0 18px rgba(232,168,50,0.25), inset 0 1px 0 rgba(232,168,50,0.15);
-    }
-    .tab-4:hover { box-shadow: 0 0 32px rgba(232,168,50,0.5), inset 0 1px 0 rgba(232,168,50,0.2); }
-
-    /* PAC5 — Cyan */
-    .tab-5 {
-      background: linear-gradient(160deg, #040f14 0%, #081a22 60%, #0e2c38 100%);
-      border: 1px solid rgba(50,195,220,0.35);
-      color: #68ddf0;
-      box-shadow: 0 0 18px rgba(50,195,220,0.25), inset 0 1px 0 rgba(50,195,220,0.15);
-    }
-    .tab-5:hover { box-shadow: 0 0 32px rgba(50,195,220,0.5), inset 0 1px 0 rgba(50,195,220,0.2); }
-
-    /* PAC6 — Rose */
-    .tab-6 {
-      background: linear-gradient(160deg, #140608 0%, #240a0e 60%, #3d1018 100%);
-      border: 1px solid rgba(232,70,100,0.35);
-      color: #f5849a;
-      box-shadow: 0 0 18px rgba(232,70,100,0.25), inset 0 1px 0 rgba(232,70,100,0.15);
-    }
-    .tab-6:hover { box-shadow: 0 0 32px rgba(232,70,100,0.5), inset 0 1px 0 rgba(232,70,100,0.2); }
-
-    /* PAC7 — Lime */
-    .tab-7 {
-      background: linear-gradient(160deg, #0a0f04 0%, #141c06 60%, #1e2c08 100%);
-      border: 1px solid rgba(162,220,50,0.35);
-      color: #c5ec72;
-      box-shadow: 0 0 18px rgba(162,220,50,0.25), inset 0 1px 0 rgba(162,220,50,0.15);
-    }
-    .tab-7:hover { box-shadow: 0 0 32px rgba(162,220,50,0.5), inset 0 1px 0 rgba(162,220,50,0.2); }
-
-    /* PAC8 — Orange */
-    .tab-8 {
-      background: linear-gradient(160deg, #140a04 0%, #241408 60%, #3c2010 100%);
-      border: 1px solid rgba(232,120,40,0.35);
-      color: #f5a060;
-      box-shadow: 0 0 18px rgba(232,120,40,0.25), inset 0 1px 0 rgba(232,120,40,0.15);
-    }
-    .tab-8:hover { box-shadow: 0 0 32px rgba(232,120,40,0.5), inset 0 1px 0 rgba(232,120,40,0.2); }
-
-    /* PAC9 — Indigo */
-    .tab-9 {
-      background: linear-gradient(160deg, #070814 0%, #0c0e26 60%, #141840 100%);
-      border: 1px solid rgba(90,100,232,0.35);
-      color: #9aa2f7;
-      box-shadow: 0 0 18px rgba(90,100,232,0.25), inset 0 1px 0 rgba(90,100,232,0.15);
-    }
-    .tab-9:hover { box-shadow: 0 0 32px rgba(90,100,232,0.5), inset 0 1px 0 rgba(90,100,232,0.2); }
-
-    /* PAC10 — Teal */
-    .tab-10 {
-      background: linear-gradient(160deg, #040f0d 0%, #081e1a 60%, #0d3028 100%);
-      border: 1px solid rgba(40,190,170,0.35);
-      color: #60dac8;
-      box-shadow: 0 0 18px rgba(40,190,170,0.25), inset 0 1px 0 rgba(40,190,170,0.15);
-    }
-    .tab-10:hover { box-shadow: 0 0 32px rgba(40,190,170,0.5), inset 0 1px 0 rgba(40,190,170,0.2); }
-
-    /* PAC11 — Pink */
-    .tab-11 {
-      background: linear-gradient(160deg, #14050f 0%, #220a1c 60%, #380f30 100%);
-      border: 1px solid rgba(220,70,180,0.35);
-      color: #ee8adc;
-      box-shadow: 0 0 18px rgba(220,70,180,0.25), inset 0 1px 0 rgba(220,70,180,0.15);
-    }
-    .tab-11:hover { box-shadow: 0 0 32px rgba(220,70,180,0.5), inset 0 1px 0 rgba(220,70,180,0.2); }
-
-    /* PAC12 — Gold */
-    .tab-12 {
-      background: linear-gradient(160deg, #120f04 0%, #201a06 60%, #342a0a 100%);
-      border: 1px solid rgba(210,175,40,0.35);
-      color: #f0d060;
-      box-shadow: 0 0 18px rgba(210,175,40,0.25), inset 0 1px 0 rgba(210,175,40,0.15);
-    }
-    .tab-12:hover { box-shadow: 0 0 32px rgba(210,175,40,0.5), inset 0 1px 0 rgba(210,175,40,0.2); }
   </style>
 </head>
 <body>
-  <h1>Select a module</h1>
+  <h1>RPAC Dashboard</h1>
   <div class="tabs">
-    <a href="PAC1.html"  class="tab tab-1">PAC1</a>
-    <a href="PAC2.html"  class="tab tab-2">PAC2</a>
-    <a href="PAC3.html"  class="tab tab-3">PAC3</a>
-    <a href="PAC4.html"  class="tab tab-4">PAC4</a>
-    <a href="PAC5.html"  class="tab tab-5">PAC5</a>
-    <a href="PAC6.html"  class="tab tab-6">PAC6</a>
-    <a href="PAC7.html"  class="tab tab-7">PAC7</a>
-    <a href="PAC8.html"  class="tab tab-8">PAC8</a>
-    <a href="PAC9.html"  class="tab tab-9">PAC9</a>
-    <a href="PAC10.html" class="tab tab-10">PAC10</a>
-    <a href="PAC11.html" class="tab tab-11">PAC11</a>
-    <a href="PAC12.html" class="tab tab-12">PAC12</a>
+    <a href="PAC1.html" class="tab tab-1">PAC1</a>
+    <a href="PAC2.html" class="tab tab-2">PAC2</a>
   </div>
 </body>
 </html>
